@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphical password authentication</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/53b89dd49e.js" crossorigin="anonymous"></script>
+</head>
+<!-- email method -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+
+</script>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Name" id="upname"/>
+                <input type="email" placeholder="Email" id="upmail" />
+                <!-- Replace password input with grid authentication -->
+                <div class="grid-container" id="upGrid"></div>
+                <button id="signupbtn" class="btn" onclick="signup()">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign in</h1>
+
+                <span>using your graphical password</span>
+                <input type="email" placeholder="Email" id="inmail" />
+                <!-- Replace password input with grid authentication -->
+                <div class="grid-container" id="inGrid"></div>
+                <button class="btn" onclick="signin()">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1 class="sideHeader">Hi👋,there!</h1>
+                    <p>Enter your personal details and a graphical password of your choice.</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1 class="sideHeader">Good to have you back &#x1F604;!</h1>
+                    <p>Let's pick up where we left off</p>
+                    <p>Don't have an account? Sign Up now!</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
